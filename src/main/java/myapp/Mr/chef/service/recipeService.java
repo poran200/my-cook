@@ -21,7 +21,7 @@ public class recipeService {
 
     public List<Recipe> findAll() {
         List <Recipe> recipeList = new ArrayList<>();
-        reciperepository.findAll().forEach(recipeList::add);
+        recipeList.addAll(reciperepository.findAll());
         return recipeList;
     }
 
