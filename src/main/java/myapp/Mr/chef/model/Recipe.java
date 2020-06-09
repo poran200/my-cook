@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class recipe {
+public class Recipe {
     @Id
     private long id;
     private String foodName;
