@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/cook")
+@RequestMapping("")
 public class recipeController {
     private recipeService recipeService;
 
     public recipeController(myapp.Mr.chef.service.recipeService recipeService) {
         this.recipeService = recipeService;
     }
-    @GetMapping("")
+    @GetMapping("/")
     public List<Recipe> getAll(){
         return recipeService.findAll();
     }
