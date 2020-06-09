@@ -4,17 +4,14 @@ package myapp.Mr.chef.service;
 import myapp.Mr.chef.exception.ResourceNotFoundException;
 import myapp.Mr.chef.model.recipe;
 import myapp.Mr.chef.repository.recipeRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class recipeService {
-    @Autowired
-    private recipeRepository reciperepository;
+    private final recipeRepository reciperepository;
 
     public recipeService(recipeRepository reciperepository) {
         this.reciperepository = reciperepository;
